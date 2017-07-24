@@ -1,0 +1,6 @@
+#Foo Bar (Baz)
+{VERSE 1}
+This is a [E]test of the [A]emergency broadcast [C]system.
+[B]This is another [F]test
+{verse 2}
+[Em][Fm]B[Am]o[Am]oo [Am]yeah!

@@ -1,0 +1,7 @@
+cd Chords
+rm *.pdf
+/Applications/LibreOffice.app/Contents/MacOS/soffice --headless --convert-to pdf *.odt
+ls *.pdf | tr '\n' '\0' | xargs -0 gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=Chords.pdf
+mv Chords.pdf ../
+rm *.pdf
+cd ..

@@ -1,7 +1,11 @@
-cd Chords
+if [ "$1" == "" ]; then
+	echo "Please include the folder name to compile"
+	exit
+fi
+cd $1
 rm *.pdf
 soffice --headless --convert-to pdf *.odt
-ls *.pdf | tr '\n' '\0' | xargs -0 gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=Chords.pdf
-mv Chords.pdf ../
+ls *.pdf | tr '\n' '\0' | xargs -0 gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$1.pdf
+mv $1.pdf ../
 rm *.pdf
 cd ..
